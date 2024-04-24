@@ -1,0 +1,50 @@
+# Prompt user for their name
+user_name = input("Welcome to the adventure game! Please enter your name: ")
+
+# Offer users a selection of characters to choose from
+print("Choose your character:")
+print("1 - Warrior: A strong and brave fighter with a powerful sword.")
+print("2 - Wizard: A wise magician with mastery over spells and potions.")
+print("3 - Ranger: A skilled archer with agility and precision.")
+
+# Prompt user to choose a character
+character_choice = input("Enter the number of the character you want to be: ")
+
+# Store character descriptions
+character_descriptions = {
+    "1": "Warrior: A strong and brave fighter with a powerful sword.",
+    "2": "Wizard: A wise magician with mastery over spells and potions.",
+    "3": "Ranger: A skilled archer with agility and precision."
+}
+
+# Display chosen character description
+if character_choice in character_descriptions:
+    print("You have chosen the", character_descriptions[character_choice])
+else:
+    print("Invalid character choice. Please try again.")
+
+# Prompt user for their area of interest
+print("\nChoose your area of interest:")
+print("1 - Computing and IT")
+print("2 - Science")
+print("3 - Engineering")
+print("4 - Health Sciences")
+
+# Store user's area of interest
+area_of_interest = input("Enter the number of your area of interest: ")
+
+# Define suggested courses for each area of interest
+suggested_courses = {
+    "1": ["STEM 101", "STEM 103", "English course"],
+    "2": ["STEM 101", "STEM 102", "Math course"],
+    "3": ["STEM 101", "ENGR 111", "Math course"],
+    "4": ["STEM 101", "STEM 102", "English course"]
+}
+
+# Display suggested courses based on user's area of interest
+if area_of_interest in suggested_courses:
+    print("\nSuggested courses for your area of interest:")
+    for course in suggested_courses[area_of_interest]:
+        print("-", course)
+else:
+    print("Invalid area of interest. Please try again.")
